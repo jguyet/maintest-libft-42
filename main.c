@@ -27,6 +27,15 @@
 
 #endif
 
+static void		txt_error_info(char *s)
+{
+	ft_putstr(" ");
+	ft_putstr(C_ERROR);
+	ft_putstr(s);
+	ft_putstr(" ");
+	ft_putstr(C_NO);
+}
+
 static int		test_memset(void)
 {
 	int		erreur = 0;
@@ -651,15 +660,6 @@ static void		txt_error(char *s)
 	ft_putstr(s);
 	ft_putstr(C_NO);
 	ft_putstr("\n");
-}
-
-static void		txt_error_info(char *s)
-{
-	ft_putstr(" ");
-	ft_putstr(C_ERROR);
-	ft_putstr(s);
-	ft_putstr(" ");
-	ft_putstr(C_NO);
 }
 
 static void		Start(void)
