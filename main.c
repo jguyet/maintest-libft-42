@@ -91,7 +91,7 @@ static int		test_memcpy(void)
 	if (!erreur)
 		reussi++;
 	else
-		txt_error_info("ft_memcpy(s1, \"ijd\0kjdno\", 9)");
+		txt_error_info("ft_memcpy(s1, \"ijd\\0kjdno\", 9)");
 	ft_memcpy(s2, st2, 0);
 	erreur = memcmp(s2, st2, 0);
 	if (!erreur)
@@ -115,7 +115,7 @@ static int		test_memccpy(void)
 	if (!erreur)
 		reussi++;
 	else
-		txt_error_info("ft_memccpy(s1, \"ijd\0t\", 9, 5)");
+		txt_error_info("ft_memccpy(s1, \"ijd\\0t\", 9, 5)");
 	ft_memccpy(s2, st2, 14, 0);
 	erreur = memcmp(s2, st2, 0);
 	if (!erreur)
@@ -192,7 +192,7 @@ static int		test_memcmp(void)
 	if (ft_memcmp("_pp\0mm2", "_pp\0mm2", 5) == memcmp("_pp\0mm2", "_pp\0mm2", 5))
 		reussi++;
 	else
-		txt_error_info("ft_memcmp(\"_pp\0mm2\", \"_pp\0mm2\", 5) == memcmp(\"_pp\0mm2\", \"_pp\0mm2\", 5)");
+		txt_error_info("ft_memcmp(\"_pp\\0mm2\", \"_pp\\0mm2\", 5) == memcmp(\"_pp\\0mm2\", \"_pp\\0mm2\", 5)");
 	if (ft_memcmp("\0\0\0", "\0\0\0", 3) == memcmp("\0\0\0", "\0\0\0", 3))
 		reussi++;
 	else
